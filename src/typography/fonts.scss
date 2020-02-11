@@ -1,0 +1,6 @@
+@import "./mixins.scss";
+
+// IBM
+// под обычный текст
+@include fontFace("IBMPlexSerifRegular", "fonts/IBM/IBMPlexSerif-Regular", 300);
+@include fontFace("IBMPlexSerifSemiBold", "fonts/IBM/IBMPlexSerif-SemiBold", 600);

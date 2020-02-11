@@ -1,0 +1,9 @@
+// path должен быть указан без расширения
+@mixin fontFace($name, $path, $bold) {
+  @font-face {
+    font-family: $name;
+    font-style: normal;
+    font-weight: $bold;
+    src: url($path+".woff") format("woff"), url($path+".ttf") format("ttf");
+  }
+}
