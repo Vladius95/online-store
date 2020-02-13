@@ -1,6 +1,6 @@
 .arrow {
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-position: center;
+  // background-repeat: no-repeat;
   &-up {
     transform: rotate(180deg);
   }
@@ -13,18 +13,18 @@
     transform: rotate(90deg);
   }
 
-  &.x16 {
-    width: 16px;
-    height: 16px;
-  }
+  // &.x16 {
+  //   width: 16px;
+  //   height: 16px;
+  // }
 
-  &.x24 {
-    width: 24px;
-    height: 24px;
-  }
+  // &.x24 {
+  //   width: 24px;
+  //   height: 24px;
+  // }
 
-  &.x32 {
-    width: 32px;
-    height: 32px;
-  }
+  // &.x32 {
+  //   width: 32px;
+  //   height: 32px;
+  // }
 }
