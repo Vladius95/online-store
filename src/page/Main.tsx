@@ -2,6 +2,7 @@ import * as React from "react";
 import { Header } from "./fragments/Header/Header";
 import { HashRouter, Switch, Redirect, Route } from "react-router-dom";
 import { HomePage } from "./fragments/Home/Home";
+import { Footer } from "./fragments/Footer/Footer";
 
 export interface MainProps {}
 
@@ -19,6 +20,7 @@ export function Main({}: MainProps) {
           {/* <Route key="photos" path="/photos/:uid/:pid" component={<div > Home Page </div>} /> */}
         </Switch>
       </main>
+      <Footer />
     </HashRouter>
   );
 }

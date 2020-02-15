@@ -1,0 +1,10 @@
+@import "src/design/typography.scss";
+
+.navigation {
+  &__item {
+    @include common;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

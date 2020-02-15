@@ -14,12 +14,10 @@
   //   transition: transform 0.5s ease;
   // }
 
-  &__arrow {
+  &__control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    fill: white;
-    stroke: white;
 
     &--prev {
       left: 0;
@@ -28,5 +26,18 @@
     &--next {
       right: 0;
     }
+  }
+
+  &__arrow {
+    fill: white;
+    stroke: white;
+  }
+
+  &__indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+
+    transform: translateX(-50%);
   }
 }

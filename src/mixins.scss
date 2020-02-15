@@ -7,3 +7,46 @@
     src: url($path+".woff") format("woff"), url($path+".ttf") format("ttf");
   }
 }
+
+@mixin setElementSize {
+  &.x8 {
+    @include setSquadSize(8);
+  }
+
+  &.x16 {
+    @include setSquadSize(16);
+  }
+
+  &.x32 {
+    @include setSquadSize(32);
+  }
+
+  &.x24 {
+    @include setSquadSize(24);
+  }
+
+  &.x32 {
+    @include setSquadSize(32);
+  }
+
+  &.x48 {
+    @include setSquadSize(48);
+  }
+
+  &.x64 {
+    @include setSquadSize(64);
+  }
+
+  &.x128 {
+    @include setSquadSize(128);
+  }
+}
+
+@mixin setSquadSize($s) {
+  @include setSize($s, $s);
+}
+
+@mixin setSize($w, $h) {
+  width: $w;
+  height: $h;
+}

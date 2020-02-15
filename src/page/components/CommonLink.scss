@@ -1,17 +1,17 @@
-@import "src/consts.scss";
+@import "src/design/colors.scss";
 
 a {
   transition: opacity 0.3s ease;
-  outline-color: $primary-color;
-  color: $primary-color;
+  outline-color: $color_blue;
+  color: $color_blue;
 
   &:link {
-    color: $primary-color;
+    color: $color_blue;
     text-decoration: none;
   }
 
   &:visited {
-    color: $primary-color;
+    color: $color_blue;
     text-decoration: none;
   }
 

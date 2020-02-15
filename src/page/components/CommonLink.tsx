@@ -4,7 +4,7 @@ import React from "react";
 import { Link, LinkProps } from "react-router-dom";
 import classNames from "classnames";
 
-interface RouteLinkProps extends LinkProps {
+interface RouteLinkProps extends Omit<LinkProps, "className"> {
   disabled?: boolean;
   extraClass?: string;
 }
@@ -13,7 +13,7 @@ export const RouteLink: React.FC<RouteLinkProps> = ({ disabled = false, extraCla
   <Link {...linkProps} className={classNames(`common-link ${extraClass}`, { "common-link-disabled": disabled })} />
 );
 
-interface CommonLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface CommonLinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "className"> {
   disabled?: boolean;
   extraClass?: string;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import * as classNames from "classnames";
+import cn from "classnames";
 import InputMask from "react-input-mask";
 
 import "./TextField.scss";
@@ -42,11 +42,22 @@ export const TextField: React.FC<TextFieldProps> = ({
   const [isFocused, setFocusActive] = React.useState(!!inputProps.value);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const { placeholder: labelText, ...restProps } = inputProps;
+
+  const onFocus = React.useCallback(() => {
+    setFocusActive(true);
+  }, []);
+
+  const onBlur = React.useCallback(() => {
+    if (inputRef.current && inputRef.current.value.length === 0) {
+      setFocusActive(false);
+    }
+  }, []);
+
   return (
     <div className={`text-field ${extraClass}`}>
       {labelText && (
         <label
-          className={classNames("text-field__label", {
+          className={cn("text-field__label", {
             "text-field__label--focused": isFocused,
             "text-field__label--has-error": hasError
           })}
@@ -59,13 +70,9 @@ export const TextField: React.FC<TextFieldProps> = ({
         ref={inputRef}
         id="text-field"
         type="text"
-        onFocus={() => setFocusActive(true)}
-        onBlur={() => {
-          if (inputRef.current && inputRef.current.value.length === 0) {
-            setFocusActive(false);
-          }
-        }}
-        className={classNames("text-field__input", { "text-field__input--has-error": !!hasError })}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        className={cn("text-field__input", { "text-field__input--has-error": !!hasError })}
         {...restProps}
       />
       {errorMessage && <p className="text-field__error-message">{errorMessage}</p>}

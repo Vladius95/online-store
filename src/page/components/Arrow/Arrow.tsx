@@ -1,6 +1,6 @@
-import React from "react";
-
 import "./Arrow.scss";
+
+import React from "react";
 
 interface ArrowProps {
   direction?: "up" | "right" | "down" | "left";

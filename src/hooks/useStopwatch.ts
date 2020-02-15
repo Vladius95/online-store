@@ -14,6 +14,7 @@ export type StopwatchSettings = {
  * @param onEnd колбэк на завершение отсчета
  * @param interval частота обновления секундомера (tick) в миллисекундах
  * @param autostart стартовать на маунте
+ * @param repeat повторять по окончанию отсчета
  */
 export function useStopwatch({ time, onEnd, interval = 1000, autostart = false, repeat = false }: StopwatchSettings) {
   const [tick, setTick] = useState(0);

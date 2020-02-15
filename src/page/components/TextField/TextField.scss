@@ -1,4 +1,4 @@
-@import "../css/consts";
+@import "src/design/colors.scss";
 
 .common-input {
   border: 1px solid transparent;
@@ -15,7 +15,7 @@
     // TODO нужно рассчитывать
     top: 16px;
     left: 17px;
-    color: $bodyText;
+    color: $color_blue;
     font-size: 1.3rem;
     cursor: text;
     pointer-events: none;
@@ -29,7 +29,7 @@
     }
 
     &--has-error {
-      color: $error-color;
+      color: $color_red;
       &:after {
         content: "*";
       }
@@ -39,9 +39,9 @@
   .text-field__input {
     padding: 12px 16px 14px;
     border-radius: 3px;
-    border: 1px solid $bodyText;
+    border: 1px solid $color_blue;
 
-    color: $commonText;
+    color: $color_blue;
 
     font-size: 1rem;
     line-height: 1.75rem;
@@ -50,21 +50,21 @@
 
     &:not(.text-field__input--has-error) {
       &:hover {
-        border-color: $commonText;
+        border-color: $color_blue;
       }
     }
 
     &:focus {
       outline: none;
-      border-color: $bodyText;
+      border-color: $color_blue;
     }
 
     &--has-error {
-      color: $error-color;
-      border-color: $error-color;
+      color: $color_red;
+      border-color: $color_red;
 
       &:focus {
-        border-color: $error-color;
+        border-color: $color_red;
       }
     }
   }
@@ -73,13 +73,13 @@
     margin-top: 4px;
     margin-left: 17px;
     font-size: 0.75rem;
-    color: $bodyText;
+    color: $color_blue;
   }
 
   &__error-message {
     margin-top: 4px;
     margin-left: 17px;
     font-size: 0.75rem;
-    color: $error-color;
+    color: $color_red;
   }
 }

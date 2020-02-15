@@ -1,16 +1,24 @@
 @import "src/design/typography.scss";
 @import "src/design/colors.scss";
 
-.home-page {
-  position: relative;
-  &__title {
+.site-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__link {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include head1;
+  }
+
+  &__link-text {
+    @include head2;
     color: $color_white;
-    z-index: 1;
-    text-align: center;
   }
 }

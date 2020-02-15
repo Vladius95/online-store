@@ -16,6 +16,10 @@
     "@types/react-input-mask": "^2.0.1",
     "@types/react-redux": "^7.1.1",
     "@types/react-router-dom": "^4.3.4",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.25.0",
     "typescript": "^3.7.5"
@@ -26,6 +30,7 @@
     "lodash": "^4.17.15",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-input-mask": "^2.0.4",
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",

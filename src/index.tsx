@@ -1,4 +1,5 @@
 import "./index.scss";
+import "babel-polyfill";
 
 import ReactDOM from "react-dom";
 import * as React from "react";

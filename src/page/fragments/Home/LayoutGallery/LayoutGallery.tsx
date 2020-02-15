@@ -5,6 +5,7 @@ import cn from "classnames";
 import { Arrow } from "src/page/components/Arrow/Arrow";
 import { useStopwatch } from "src/hooks/useStopwatch";
 import { useEventListener } from "src/hooks/useEventListener";
+import { SlideIndicator } from "../SlideIndicator/SlideIndicator";
 
 export interface LayoutGalleryProps {
   width: number;
@@ -12,7 +13,7 @@ export interface LayoutGalleryProps {
   imgs: string[];
 }
 
-export function LayoutGallery({ width, height, imgs }: LayoutGalleryProps) {
+export function LayoutGallery({ width, height, imgs, children }: React.PropsWithChildren<LayoutGalleryProps>) {
   const [index, setIndex] = React.useState(0);
   const [animationEnabled, setAnimationEnabled] = React.useState(true);
 
@@ -82,18 +83,16 @@ export function LayoutGallery({ width, height, imgs }: LayoutGalleryProps) {
         </li>
       </ul>
 
-      <Arrow
-        direction="left"
-        onClick={onPrev}
-        size="x32"
-        extraClass="layout-gallery__arrow layout-gallery__arrow--prev"
-      />
-      <Arrow
-        direction="right"
-        onClick={onNext}
-        size="x32"
-        extraClass="layout-gallery__arrow layout-gallery__arrow--next"
-      />
+      <button onClick={onPrev} className="layout-gallery__control layout-gallery__control--prev">
+        <Arrow direction="left" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--prev" />
+      </button>
+
+      <button onClick={onNext} className="layout-gallery__control layout-gallery__control--next">
+        <Arrow direction="right" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--next" />
+      </button>
+
+      <SlideIndicator count={imgs.length} active={index} extraClass="layout-gallery__indicator" />
+      {children}
     </article>
   );
 }
