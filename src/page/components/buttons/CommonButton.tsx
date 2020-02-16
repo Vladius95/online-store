@@ -2,21 +2,19 @@ import React from "react";
 
 import "./CommonButton.scss";
 
-interface CommonButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
+export interface CommonButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
   extraClass?: string;
 }
 
-export const CommonButton: React.SFC<CommonButtonProps> = ({ extraClass = "", ...buttonProps }) => {
+export function CommonButton({ extraClass = "", ...buttonProps }: CommonButtonProps) {
   return <button {...buttonProps} className={`common-button ${extraClass}`} />;
-};
+}
 
 // https://material.io/components/buttons/
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
   extraClass?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ extraClass = "", ...buttonProps }) => {
+export function Button({ extraClass = "", ...buttonProps }: ButtonProps) {
   return <button {...buttonProps} className={`button ${extraClass}`} />;
-};
-
-Button.displayName = "Button";
+}

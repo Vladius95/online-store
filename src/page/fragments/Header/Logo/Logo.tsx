@@ -1,12 +1,15 @@
 import "./Logo.scss";
+
 import * as React from "react";
+import { Size } from "src/types/size";
 
 const logo = require("./logo.svg");
 
 export interface LogoProps {
-  size: "x16" | "x32" | "x48" | "x64";
+  size: Size;
 }
 
 export function Logo({ size }: LogoProps) {
-  return <img src={logo} alt="Logo" className={`logo ${size}`} />;
+  console.log(logo);
+  return <img src={logo.default} alt="Logo" className={`logo ${size}`} />;
 }

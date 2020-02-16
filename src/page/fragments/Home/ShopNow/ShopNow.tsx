@@ -4,10 +4,10 @@ export interface ShopNowProps {
   onClick(e: React.SyntheticEvent<HTMLButtonElement>): void;
 }
 
-export function ShopNow({ onClick }: ShopNowProps) {
+export function ShopNowButton({ onClick }: ShopNowProps) {
   return (
     <button className="shop-now">
-      <p>Shop Now</p>
+      <p className="">Shop Now</p>
     </button>
   );
 }

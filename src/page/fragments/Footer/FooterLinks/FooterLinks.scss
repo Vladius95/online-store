@@ -1,0 +1,15 @@
+@import "src/design/typography.scss";
+@import "src/design/colors.scss";
+
+.footer-links {
+  &__text {
+    color: $color_blue;
+    @include common;
+  }
+
+  // &__route-link {
+  //   &:first-child {
+  //     margin-bottom: 12px;
+  //   }
+  // }
+}

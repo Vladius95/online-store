@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "name": "Some Product",
+    "cost": 140,
+    "img": "1.webp",
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 1,
+    "name": "Some Product",
+    "cost": 110,
+    "img": "2.webp",
+    "isBestSeller": true,
+    "type": "accessories"
+  },
+  {
+    "id": 2,
+    "name": "Some Product",
+    "cost": 110,
+    "img": "3.webp",
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 3,
+    "name": "Some Product",
+    "cost": 70,
+    "img": "4.webp",
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 4,
+    "name": "Some Product",
+    "cost": 45,
+    "img": "5.webp",
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 5,
+    "name": "Some Product",
+    "cost": 140,
+    "img": "6.webp",
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 6,
+    "name": "Some Product",
+    "cost": 115,
+    "img": "7.webp",
+    "isBestSeller": false,
+    "type": "accessories"
+  },
+  {
+    "id": 7,
+    "name": "Some Product",
+    "cost": 120,
+    "img": "8.webp",
+    "isBestSeller": true,
+    "type": "accessories"
+  },
+  {
+    "id": 8,
+    "name": "Some Product",
+    "cost": 180,
+    "img": "9.webp",
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 9,
+    "name": "Some Product",
+    "cost": 80,
+    "img": "10.webp",
+    "isBestSeller": false,
+    "type": "accessories"
+  },
+  {
+    "id": 10,
+    "name": "Some Product",
+    "cost": 140,
+    "img": "11.webp",
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 11,
+    "name": "Some Product",
+    "cost": 60,
+    "img": "12.webp",
+    "isBestSeller": false,
+    "type": "tops"
+  }
+]

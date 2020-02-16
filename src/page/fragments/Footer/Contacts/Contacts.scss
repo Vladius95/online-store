@@ -1,0 +1,21 @@
+@import "src/design/typography.scss";
+@import "src/design/colors.scss";
+
+.contacts {
+  // &__address {
+  //   .contacts__text {
+  //     &:first-child {
+  //       margin-bottom: 12px;
+  //     }
+  //   }
+  // }
+
+  &__text {
+    color: $color_blue;
+    @include common;
+  }
+
+  // &__email {
+  //   margin-bottom: 12px;
+  // }
+}

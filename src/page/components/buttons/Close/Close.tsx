@@ -1,7 +1,7 @@
-import * as React from "react";
-import { CommonButton } from "static/page/components/buttons/CommonButton";
-
 import "./Close.scss";
+
+import * as React from "react";
+import { CommonButton } from "src/page/components/buttons/CommonButton";
 
 const CloseImage = require("./imgs/close.svg");
 

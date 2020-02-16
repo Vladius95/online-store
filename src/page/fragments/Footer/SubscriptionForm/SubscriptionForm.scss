@@ -1,0 +1,17 @@
+@import "src/design/typography.scss";
+@import "src/design/colors.scss";
+
+.subscription-form {
+  &__text {
+    margin-bottom: 12px;
+    color: $color_blue;
+    @include common;
+  }
+
+  &__subscribe-btn {
+    margin-top: 12px;
+    background: $color_gray;
+    padding: 8px;
+    width: 100%;
+  }
+}

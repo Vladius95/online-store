@@ -1,8 +1,8 @@
 import React from "react";
 import * as classNames from "classnames";
 
-import { CommonButton } from "static/page/components/buttons/CommonButton";
-import { CommonInput } from "static/page/components/TextField";
+import { CommonButton } from "src/page/components/buttons/CommonButton";
+import { CommonInput } from "src/page/components/TextField/TextField";
 
 const ClearIcon = require("./images/clear.svg");
 const LoupeIcon = require("./images/loupe.svg");

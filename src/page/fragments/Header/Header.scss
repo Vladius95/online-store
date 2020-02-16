@@ -8,5 +8,13 @@
     .navigation__list {
       display: flex;
     }
+
+    .navigation {
+      &__item {
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+      }
+    }
   }
 }

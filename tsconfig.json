@@ -8,6 +8,7 @@
     "jsx": "react",
     "outDir": "./ts-build",
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "allowJs": true,
     "lib": ["es2018", "dom"],
     "baseUrl": "./",

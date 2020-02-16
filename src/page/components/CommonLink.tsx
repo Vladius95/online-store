@@ -21,3 +21,7 @@ interface CommonLinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElem
 export const CommonLink: React.FC<CommonLinkProps> = ({ disabled = false, extraClass = "", ...aProps }) => (
   <a {...aProps} className={classNames(`common-link ${extraClass}`, { "common-link-disabled": disabled })} />
 );
+
+export function BorderedLink(props: RouteLinkProps) {
+  return <RouteLink {...props} extraClass="bordered-link" />;
+}
