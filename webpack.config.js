@@ -43,6 +43,10 @@ module.exports = {
       {
         from: path.join(__dirname, "src/data"),
         to: path.join(__dirname, "build/data")
+      },
+      {
+        from: path.join(__dirname, "src/fonts"),
+        to: path.join(__dirname, "build/fonts")
       }
     ])
   ],
@@ -80,15 +84,6 @@ module.exports = {
         loader: "url-loader",
         options: {
           limit: 25000
-        }
-      },
-      {
-        test: /\.(woff(2)?|eot|ttf|otf|)$/,
-        loader: "url-loader",
-        options: {
-          limit: 8192,
-          name: "[path][name].[ext]",
-          context: "fonts" // prevent display of src/ in filename
         }
       }
     ]
