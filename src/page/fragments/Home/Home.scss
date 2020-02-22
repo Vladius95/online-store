@@ -1,9 +1,10 @@
 @import "src/design/typography.scss";
 @import "src/design/colors.scss";
+@import "src/consts.scss";
 
 .home-page {
   position: relative;
-  padding: 24px 60px;
+  padding: 24px $page-gap;
 
   &__title {
     position: absolute;

@@ -1,16 +1,8 @@
+@import "src/consts.scss";
+
 .footer {
   display: flex;
   justify-content: space-between;
 
-  padding: 24px 60px;
-
-  // &__navigation {
-  //   .navigation {
-  //     &__item {
-  //       &:not(:last-child) {
-  //         margin-bottom: 12px;
-  //       }
-  //     }
-  //   }
-  // }
+  padding: 24px $page-gap;
 }
