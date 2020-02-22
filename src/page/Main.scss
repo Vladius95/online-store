@@ -1,0 +1,6 @@
+@import "src/consts.scss";
+
+.page-wrapper {
+  min-width: $site-min-width;
+  max-width: $site-max-width;
+}

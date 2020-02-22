@@ -1,7 +1,9 @@
 @import "src/design/typography.scss";
+@import "src/design/colors.scss";
 
 .navigation {
-  &__item {
+  &__text {
     @include common;
+    color: $color_blue;
   }
 }

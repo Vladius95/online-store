@@ -1,3 +1,5 @@
+import "./StorePage.scss";
+
 import * as React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "src/store/root";

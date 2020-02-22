@@ -1,0 +1,13 @@
+@import "src/design/colors.scss";
+@import "src/design/typography.scss";
+
+.store-page {
+  background-color: $color_gray;
+  padding: 36px 0;
+
+  &__title {
+    padding-bottom: 36px;
+    text-align: center;
+    @include head3;
+  }
+}

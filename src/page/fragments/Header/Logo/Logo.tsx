@@ -10,6 +10,5 @@ export interface LogoProps {
 }
 
 export function Logo({ size }: LogoProps) {
-  console.log(logo);
   return <img src={logo.default} alt="Logo" className={`logo ${size}`} />;
 }

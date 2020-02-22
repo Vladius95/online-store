@@ -13,7 +13,7 @@ export function HomePage() {
   return (
     <section className="home-page">
       <ShopNowButton onClick={() => console.log("test")} />
-      <LayoutGallery width={800} height={600} imgs={[img1, img2, img3]}>
+      <LayoutGallery width={800} height={600} imgs={[img1.default, img2.default, img3.default]}>
         <h1 className="home-page__title">New Outerwear Collection</h1>
       </LayoutGallery>
       <SiteLinks />

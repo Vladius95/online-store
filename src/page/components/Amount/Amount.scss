@@ -1,0 +1,14 @@
+@import "src/design/typography.scss";
+@import "src/design/colors.scss";
+
+.amount {
+  @include common;
+  color: $color_black;
+
+  &.usd {
+    &:before {
+      content: "\0024";
+      padding-right: 4px;
+    }
+  }
+}

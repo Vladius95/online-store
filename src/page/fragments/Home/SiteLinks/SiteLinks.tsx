@@ -13,13 +13,13 @@ export function SiteLinks() {
         <RouteLink to="/about" extraClass="site-links__link">
           <h3 className="site-links__link-text">Our Story</h3>
         </RouteLink>
-        <img src={storyImage} alt="Our Story" className="site-links__link-image" />
+        <img src={storyImage.default} alt="Our Story" className="site-links__link-image" />
       </div>
       <div className="site-links__wrapper">
         <RouteLink to="/blog" extraClass="site-links__link">
           <h3 className="site-links__link-text">Our Blog</h3>
         </RouteLink>
-        <img src={blogImage} alt="Blog Story" className="site-links__link-image" />
+        <img src={blogImage.default} alt="Blog Story" className="site-links__link-image" />
       </div>
     </section>
   );
