@@ -1,26 +1,35 @@
-import { createStore, Action, Store, Reducer } from "redux";
+import { Action, Reducer, createStore } from "redux";
+import { CommonErrors } from "./root";
 
-export type GoodsItem = {
+export interface Goods {
   id: number;
   cost: number;
-  img: string;
+  description: string;
+  info: string;
+  imgs: string[];
   isBestSeller: boolean;
   name: string;
   type: "shoes" | "accessories" | "tops";
-};
-
-export type Goods = GoodsItem[];
-
-export type GoodsState = Goods;
-
-export interface GoodsAction extends Action {
-  goods: Goods;
-  type: "GET_GOODS";
 }
 
-export const goodsReducer: Reducer<GoodsState, GoodsAction> = (goods: GoodsState = [], action: GoodsAction) => {
+export type GoodsState = {
+  isLoading: boolean;
+  error?: CommonErrors;
+  goods?: Goods;
+};
+
+export interface GoodsAction extends Action {
+  goods: GoodsState;
+  type: "GET_GOODS_SUCCESS" | "GET_GOODS_FAILED";
+}
+
+const initialGoodsState: GoodsState = {
+  isLoading: true
+};
+
+export const storeReducer: Reducer<GoodsState, GoodsAction> = (goods = initialGoodsState, action: GoodsAction) => {
   switch (action.type) {
-    case "GET_GOODS":
+    case "GET_GOODS_SUCCESS":
       return action.goods;
 
     default:
@@ -28,4 +37,4 @@ export const goodsReducer: Reducer<GoodsState, GoodsAction> = (goods: GoodsState
   }
 };
 
-export const goodsStore = createStore(goodsReducer);
+export const storeStore = createStore(storeReducer);

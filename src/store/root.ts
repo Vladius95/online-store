@@ -1,16 +1,18 @@
 import { combineReducers, Reducer } from "redux";
-import { goodsReducer, GoodsAction, GoodsState, Goods } from "src/store/goods";
+import { storeDetailsReducer, StoreDetailsAction, StoreDetailsState } from "src/store/store-details";
+
+export type CommonErrors = "INTERNAL_ERROR" | "REQUEST_ERROR";
 
 export interface State {
-  goodsReducer: GoodsAction;
+  goodsReducer: StoreDetailsAction;
 }
 
 export type rootReducers = {
-  goodsReducer: Reducer<GoodsState, GoodsAction>;
+  goodsReducer: Reducer<StoreDetailsState, StoreDetailsAction>;
 };
 
 export type RootState = {
-  goodsReducer: Goods;
+  storeDetailsReducer: StoreDetailsState;
 };
 
-export const mergedReducers = combineReducers({ goodsReducer });
+export const mergedReducers = combineReducers({ storeDetailsReducer });
