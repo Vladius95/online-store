@@ -1,0 +1,24 @@
+@import "src/design/typography";
+@import "src/design/colors";
+
+.bread-crumbs {
+  display: flex;
+
+  &__item {
+    display: flex;
+    &:not(:last-child):after {
+      content: "/";
+      padding: 0 4px;
+      @include common;
+    }
+  }
+
+  &__text {
+    @include common;
+    color: $color_blue;
+
+    &--current {
+      opacity: 0.5;
+    }
+  }
+}

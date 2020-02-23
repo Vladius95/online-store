@@ -20,7 +20,7 @@ export function Main() {
         <div className="page-wrapper">
           <Header />
           <main className="main">
-            <Redirect exact from="/" to="/store/" />
+            <Redirect exact from="/" to="/store/1" />
             <Switch>
               <Route exact key="home" path="/home/" component={HomePage} />
               <Route exact key="store" path="/store/" component={StorePage} />

@@ -1,10 +1,11 @@
 import "./Arrow.scss";
 
 import React from "react";
+import { Size } from "src/types/size";
 
 interface ArrowProps {
   direction?: "up" | "right" | "down" | "left";
-  size?: "x16" | "x24" | "x32" | "x48" | "x64";
+  size?: Size;
   extraClass?: string;
 }
 
@@ -14,8 +15,6 @@ export const Arrow: React.SFC<ArrowProps> = ({ direction = "down", size = "x16",
     <svg
       width={sizeNum}
       height={sizeNum}
-      x="0px"
-      y="0px"
       viewBox="0 0 314.5 314.5"
       className={`arrow arrow-${direction} ${extraClass}`}
     >

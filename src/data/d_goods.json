@@ -1,101 +1,123 @@
-{
-  "goods": [
-    {
-      "id": 0,
-      "name": "Some Product",
-      "cost": 140,
-      "imgs": ["1.webp"],
-      "isBestSeller": false,
-      "type": "shoes"
-    },
-    {
-      "id": 1,
-      "name": "Some Product",
-      "cost": 110,
-      "imgs": ["2.webp"],
-      "isBestSeller": true,
-      "type": "accessories"
-    },
-    {
-      "id": 2,
-      "name": "Some Product",
-      "cost": 110,
-      "imgs": ["3.webp"],
-      "isBestSeller": false,
-      "type": "shoes"
-    },
-    {
-      "id": 3,
-      "name": "Some Product",
-      "cost": 70,
-      "imgs": ["4.webp"],
-      "isBestSeller": false,
-      "type": "tops"
-    },
-    {
-      "id": 4,
-      "name": "Some Product",
-      "cost": 45,
-      "imgs": ["5.webp"],
-      "isBestSeller": false,
-      "type": "tops"
-    },
-    {
-      "id": 5,
-      "name": "Some Product",
-      "cost": 140,
-      "imgs": ["6.webp"],
-      "isBestSeller": false,
-      "type": "shoes"
-    },
-    {
-      "id": 6,
-      "name": "Some Product",
-      "cost": 115,
-      "imgs": ["7.webp"],
-      "isBestSeller": false,
-      "type": "accessories"
-    },
-    {
-      "id": 7,
-      "name": "Some Product",
-      "cost": 120,
-      "imgs": ["8.webp"],
-      "isBestSeller": true,
-      "type": "accessories"
-    },
-    {
-      "id": 8,
-      "name": "Some Product",
-      "cost": 180,
-      "imgs": ["9.webp"],
-      "isBestSeller": false,
-      "type": "tops"
-    },
-    {
-      "id": 9,
-      "name": "Some Product",
-      "cost": 80,
-      "imgs": ["10.webp"],
-      "isBestSeller": false,
-      "type": "accessories"
-    },
-    {
-      "id": 10,
-      "name": "Some Product",
-      "cost": 140,
-      "imgs": ["11.webp"],
-      "isBestSeller": false,
-      "type": "shoes"
-    },
-    {
-      "id": 11,
-      "name": "Some Product",
-      "cost": 60,
-      "imgs": ["12.webp"],
-      "isBestSeller": false,
-      "type": "tops"
-    }
-  ],
-  "count": 300
-}
+[
+  {
+    "id": 0,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 140,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["1.webp"],
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 1,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 110,
+    "size": ["XS", "S", "M", "L"],
+
+    "imgs": ["2.webp", "2_2.webp", "2_3.webp"],
+    "isBestSeller": true,
+    "type": "accessories"
+  },
+  {
+    "id": 2,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 110,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["3.webp", "3_2.webp", "3_3.webp"],
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 3,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 70,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["4.webp", "4_2.webp", "4_3.webp"],
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 4,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 45,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["5.webp"],
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 5,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 140,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["6.webp"],
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 6,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 115,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["7.webp"],
+    "isBestSeller": false,
+    "type": "accessories"
+  },
+  {
+    "id": 7,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 120,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["8.webp", "8_2.webp", "8_3.webp"],
+    "isBestSeller": true,
+    "type": "accessories"
+  },
+  {
+    "id": 8,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 180,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["9.webp"],
+    "isBestSeller": false,
+    "type": "tops"
+  },
+  {
+    "id": 9,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 80,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["10.webp", "10_2.webp", "10_3.webp", "10_4.webp"],
+    "isBestSeller": false,
+    "type": "accessories"
+  },
+  {
+    "id": 10,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 140,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["11.webp"],
+    "isBestSeller": false,
+    "type": "shoes"
+  },
+  {
+    "id": 11,
+    "name": "Some Product",
+    "description": "I'm a product description. This is a great place to 'sell' your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy",
+    "cost": 60,
+    "size": ["XS", "S", "M", "L"],
+    "imgs": ["12.webp"],
+    "isBestSeller": false,
+    "type": "tops"
+  }
+]

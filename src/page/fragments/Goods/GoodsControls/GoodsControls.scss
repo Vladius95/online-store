@@ -1,0 +1,38 @@
+@import "src/design/typography";
+@import "src/design/colors";
+
+.goods-controls {
+  display: flex;
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+    &--prev {
+      padding-right: 4px;
+      &:after {
+        padding: 0 8px;
+        content: "|";
+        @include common;
+        color: $color_blue;
+      }
+    }
+  }
+
+  &__text {
+    @include common;
+    color: $color_blue;
+  }
+
+  &__arrow {
+    fill: $color_blue;
+
+    &--prev {
+      padding-right: 8px;
+    }
+
+    &--next {
+      padding-left: 8px;
+    }
+  }
+}

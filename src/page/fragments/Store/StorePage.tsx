@@ -10,7 +10,7 @@ import { StoreGrid } from "./StoreGrid/StoreGrid";
 export interface StorePageProps {}
 
 export function StorePage({}: StorePageProps) {
-  const [isLoading, isError] = useResource<StoreDetailsAction, StoreDetails>("data/d_goods.json", res => ({
+  const [isLoading, isError] = useResource<StoreDetailsAction, StoreDetails>("data/d_store-details.json", res => ({
     type: "GET_STORE_SUCCESS",
     store: { storeDetails: res, isLoading: false }
   }));

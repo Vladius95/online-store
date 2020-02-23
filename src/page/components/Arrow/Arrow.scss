@@ -1,4 +1,8 @@
+@import "src/mixins";
+
 .arrow {
+  @include setElementSize;
+
   &-up {
     transform: rotate(180deg);
   }

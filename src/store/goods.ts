@@ -1,9 +1,12 @@
 import { Action, Reducer, createStore } from "redux";
-import { CommonErrors } from "./root";
+import { CommonErrors } from "src/types/t_redux";
+
+export type GoodsSize = "XS" | "S" | "M" | "L";
 
 export interface Goods {
   id: number;
   cost: number;
+  size: GoodsSize[];
   description: string;
   info: string;
   imgs: string[];
@@ -27,7 +30,7 @@ const initialGoodsState: GoodsState = {
   isLoading: true
 };
 
-export const storeReducer: Reducer<GoodsState, GoodsAction> = (goods = initialGoodsState, action: GoodsAction) => {
+export const goodsReducer: Reducer<GoodsState, GoodsAction> = (goods = initialGoodsState, action: GoodsAction) => {
   switch (action.type) {
     case "GET_GOODS_SUCCESS":
       return action.goods;
@@ -37,4 +40,4 @@ export const storeReducer: Reducer<GoodsState, GoodsAction> = (goods = initialGo
   }
 };
 
-export const storeStore = createStore(storeReducer);
+export const goodsStore = createStore(goodsReducer);

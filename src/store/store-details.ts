@@ -1,6 +1,6 @@
 import { createStore, Action, Store, Reducer } from "redux";
 import { Goods } from "./goods";
-import { CommonErrors } from "./root";
+import { CommonErrors } from "src/types/t_redux";
 
 export type StoreDetails = {
   goods: Goods[];
