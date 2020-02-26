@@ -9,18 +9,19 @@ interface ArrowProps {
   extraClass?: string;
 }
 
-export const Arrow: React.SFC<ArrowProps> = ({ direction = "down", size = "x16", extraClass = "", ...imgProps }) => {
+export const Arrow: React.SFC<ArrowProps> = ({ direction = "right", size = "x16", extraClass = "", ...imgProps }) => {
   const sizeNum = size.slice(1);
   return (
     <svg
       width={sizeNum}
       height={sizeNum}
-      viewBox="0 0 314.5 314.5"
-      className={`arrow arrow-${direction} ${extraClass}`}
+      viewBox="0 0 512.002 512.002"
+      className={`arrow arrow__direction-${direction} ${extraClass}`}
     >
       <path
-        d="M314.5,90.5c0,6-2,13-7,18l-133,133c-5,5-10,7-17,7s-12-2-17-7l-133-133c-10-10-10-25,0-35
-			s24-10,34,0l116,116l116-116c10-10,24-10,34,0C312.5,78.5,314.5,84.5,314.5,90.5z"
+        d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+			L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+			l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"
       />
     </svg>
   );

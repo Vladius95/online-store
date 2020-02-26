@@ -1,0 +1,21 @@
+@import "src/design/typography";
+
+.goods-order-form {
+  &__name {
+    @include head3;
+    margin-bottom: 12px;
+  }
+
+  &__sku {
+    @include common-light;
+  }
+
+  &__goods-number {
+    width: 100px;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

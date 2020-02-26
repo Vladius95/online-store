@@ -4,10 +4,12 @@ import * as React from "react";
 
 export interface AmountProps {
   amount: number;
-  currency: string;
+  currency: "USD" | "RUB";
   extraClass?: string;
 }
 
 export function Amount({ amount, currency, extraClass = "" }: AmountProps) {
-  return <p className={`amount ${currency} ${extraClass}`}>{amount}</p>;
+  const numberFormat = React.useRef(new Intl.NumberFormat("en-US", { style: "currency", currency: currency }));
+
+  return <p className={`amount ${extraClass}`}>{numberFormat.current.format(amount)}</p>;
 }

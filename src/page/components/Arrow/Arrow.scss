@@ -3,15 +3,17 @@
 .arrow {
   @include setElementSize;
 
-  &-up {
-    transform: rotate(180deg);
-  }
+  &__direction {
+    &-up {
+      transform: rotate(-90deg);
+    }
 
-  &-right {
-    transform: rotate(-90deg);
-  }
+    &-down {
+      transform: rotate(90deg);
+    }
 
-  &-left {
-    transform: rotate(90deg);
+    &-left {
+      transform: rotate(180deg);
+    }
   }
 }

@@ -2,30 +2,32 @@ import "./BreadCrumbs.scss";
 
 import * as React from "react";
 import { RouteLink } from "../CommonLink";
+import * as cn from "classnames";
 
 export type BreadCrumb = {
   name: string;
   link: string;
+  current?: boolean;
 };
 
 export interface BreadCrumbsProps {
   breadCrumbs: BreadCrumb[];
-  current: string;
 }
 
-export function BreadCrumbs({ breadCrumbs, current }: BreadCrumbsProps) {
+export function BreadCrumbs({ breadCrumbs }: BreadCrumbsProps) {
   return (
     <ul className="bread-crumbs">
       {breadCrumbs.map((b, key) => (
-        <li key={b.name} className="bread-crumbs__item">
-          <RouteLink to={b.link}>
+        <li key={key} className={cn("bread-crumbs__item", { "bread-crumbs__item--current": !!b.current })}>
+          {b.current ? (
             <p className="bread-crumbs__text">{b.name}</p>
-          </RouteLink>
+          ) : (
+            <RouteLink to={b.link}>
+              <p className="bread-crumbs__text">{b.name}</p>
+            </RouteLink>
+          )}
         </li>
       ))}
-      <li key={current} className="bread-crumbs__item">
-        <p className="bread-crumbs__text bread-crumbs__text--current">{current}</p>
-      </li>
     </ul>
   );
 }

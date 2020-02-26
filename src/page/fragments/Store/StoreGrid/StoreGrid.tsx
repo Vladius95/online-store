@@ -18,7 +18,7 @@ export function StoreGrid({ goods }: StoreGridProps) {
           <RouteLink to={`/store/${g.id}`}>
             <img src={imageFullPath(g.imgs[0])} alt="Product Image" className="store-grid__image" />
             <p className="store-grid__name">{g.name}</p>
-            <Amount amount={g.cost} currency="usd" />
+            <Amount amount={g.cost} currency="USD" />
           </RouteLink>
         </li>
       ))}

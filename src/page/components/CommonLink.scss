@@ -1,25 +1,11 @@
 @import "src/design/colors.scss";
 
-a {
-  //transition: opacity 0.3s ease;
-  //outline-color: $color_blue;
-  //color: $color_blue;
-
+.common-link {
   &:link {
-    //color: $color_blue;
     text-decoration: none;
   }
 
   &:visited {
-    //color: $color_blue;
     text-decoration: none;
   }
-
-  // &:hover {
-  //   opacity: 0.7;
-  // }
-
-  // &:active {
-  //   opacity: 0.3;
-  // }
 }

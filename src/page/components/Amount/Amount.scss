@@ -4,11 +4,4 @@
 .amount {
   @include common;
   color: $color_black;
-
-  &.usd {
-    &:before {
-      content: "\0024";
-      padding-right: 4px;
-    }
-  }
 }

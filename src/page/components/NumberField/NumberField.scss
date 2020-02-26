@@ -1,0 +1,12 @@
+.number-field {
+  position: relative;
+
+  &__controls {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

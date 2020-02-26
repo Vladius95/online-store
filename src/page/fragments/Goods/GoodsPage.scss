@@ -1,0 +1,28 @@
+@import "src/consts.scss";
+
+.goods-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  // padding: 24px $page-gap;
+  width: 890px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  &__goods-wrapper {
+    display: flex;
+  }
+
+  &__left-part {
+    width: 50%;
+    margin-right: 32px;
+  }
+
+  &__right-part {
+    width: 50%;
+  }
+}

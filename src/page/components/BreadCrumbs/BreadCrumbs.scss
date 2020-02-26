@@ -11,14 +11,14 @@
       padding: 0 4px;
       @include common;
     }
+
+    &--current {
+      opacity: 0.5;
+    }
   }
 
   &__text {
     @include common;
     color: $color_blue;
-
-    &--current {
-      opacity: 0.5;
-    }
   }
 }

@@ -13,6 +13,10 @@
     @include setSquadSize(8);
   }
 
+  &.x12 {
+    @include setSquadSize(12);
+  }
+
   &.x16 {
     @include setSquadSize(16);
   }

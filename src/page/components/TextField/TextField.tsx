@@ -25,7 +25,7 @@ export const MaskInput: React.FC<MaskInputProps> = ({ extraClass = "", ...inputP
 );
 
 // https://material.io/components/text-fields/#
-export interface TextFieldProps extends Omit<CommonInputProps, "id" | "className"> {
+export interface TextFieldProps extends Omit<CommonInputProps, "className"> {
   hasError?: boolean;
   errorMessage?: string;
   helperMessage?: string;
@@ -68,7 +68,6 @@ export const TextField: React.FC<TextFieldProps> = ({
       )}
       <input
         ref={inputRef}
-        id="text-field"
         type="text"
         onFocus={onFocus}
         onBlur={onBlur}

@@ -1,6 +1,6 @@
-import React from "react";
-
 import "./CommonButton.scss";
+
+import React from "react";
 
 export interface CommonButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
   extraClass?: string;
@@ -15,6 +15,6 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
   extraClass?: string;
 }
 
-export function Button({ extraClass = "", ...buttonProps }: ButtonProps) {
+export function MaterialButton({ extraClass = "", ...buttonProps }: ButtonProps) {
   return <button {...buttonProps} className={`button ${extraClass}`} />;
 }
