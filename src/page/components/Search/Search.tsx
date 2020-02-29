@@ -1,5 +1,5 @@
 import React from "react";
-import * as classNames from "classnames";
+import classNames from "classnames";
 
 import { CommonButton } from "src/page/components/buttons/CommonButton";
 import { CommonInput } from "src/page/components/TextField/TextField";

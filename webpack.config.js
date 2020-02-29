@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ThreadsPlugin = require("threads-plugin");
 
 const definePlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || "true"))
@@ -48,7 +49,8 @@ module.exports = {
         from: path.join(__dirname, "src/fonts"),
         to: path.join(__dirname, "build/fonts")
       }
-    ])
+    ]),
+    new ThreadsPlugin()
   ],
   module: {
     rules: [
@@ -83,7 +85,8 @@ module.exports = {
         test: /\.(jpg|png|svg|webp)$/,
         loader: "url-loader",
         options: {
-          limit: 25000
+          limit: 25000,
+          inline: true
         }
       }
     ]

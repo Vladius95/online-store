@@ -2,7 +2,7 @@ import "./BreadCrumbs.scss";
 
 import * as React from "react";
 import { RouteLink } from "../CommonLink";
-import * as cn from "classnames";
+import cn from "classnames";
 
 export type BreadCrumb = {
   name: string;

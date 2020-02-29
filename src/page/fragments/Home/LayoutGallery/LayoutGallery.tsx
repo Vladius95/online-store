@@ -19,7 +19,7 @@ export function LayoutGallery({ width, height, imgs, children }: React.PropsWith
 
   const galleryElement = React.useRef<HTMLUListElement>();
 
-  const { tick, onStart, onPause, onReset, onResume } = useStopwatch({
+  const { tick, onStart, onPause, onReset } = useStopwatch({
     time: 2000,
     onEnd: () => {
       setIndex(prevIndex => {
@@ -31,7 +31,7 @@ export function LayoutGallery({ width, height, imgs, children }: React.PropsWith
         return next;
       });
     },
-    autostart: false,
+    autostart: true,
     repeat: true
   });
 
