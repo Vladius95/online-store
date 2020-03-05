@@ -1,7 +1,7 @@
 import "./GoodsControls.scss";
 
 import * as React from "react";
-import { Arrow } from "src/page/components/Arrow/Arrow";
+import { Arrow } from "src/page/components/icons/Arrow/Arrow";
 import { CommonButton } from "src/page/components/buttons/CommonButton";
 
 export type GoodsControl = {
@@ -22,7 +22,7 @@ export function GoodsControls({ prevControl, nextControl }: GoodsControlsProps) 
         onClick={prevControl.onClick}
         extraClass="goods-controls__button goods-controls__button--prev"
       >
-        <Arrow direction="left" extraClass="goods-controls__arrow goods-controls__arrow--prev" size="x8" />
+        <Arrow rotate="left" extraClass="goods-controls__arrow goods-controls__arrow--prev" size="x8" />
         <p className="goods-controls__text">Prev</p>
       </CommonButton>
       <CommonButton
@@ -31,7 +31,7 @@ export function GoodsControls({ prevControl, nextControl }: GoodsControlsProps) 
         extraClass="goods-controls__button goods-controls__button--next"
       >
         <p className="goods-controls__text">Next</p>
-        <Arrow direction="right" extraClass="goods-controls__arrow goods-controls__arrow--next" size="x8" />
+        <Arrow rotate="right" extraClass="goods-controls__arrow goods-controls__arrow--next" size="x8" />
       </CommonButton>
     </section>
   );

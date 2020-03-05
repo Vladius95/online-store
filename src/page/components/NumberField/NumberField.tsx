@@ -3,7 +3,7 @@ import "./NumberField.scss";
 import * as React from "react";
 import { TextField, TextFieldProps } from "../TextField/TextField";
 import { CommonButton } from "../buttons/CommonButton";
-import { Arrow } from "../Arrow/Arrow";
+import { Arrow } from "../icons/Arrow/Arrow";
 
 export interface NumberFieldProps {
   value: number;
@@ -24,10 +24,10 @@ export function NumberField({ value, extraClass = "" }: NumberFieldProps) {
       <TextField type="number" value={_value} extraClass="number-field__input" />
       <div className="number-field__controls">
         <CommonButton onClick={onIncreaseValue} extraClass="number-field__increase">
-          <Arrow direction="up" size="x12" />
+          <Arrow rotate="up" size="x12" />
         </CommonButton>
         <CommonButton onClick={onDecreaseValue} extraClass="number-field__deacrease">
-          <Arrow direction="down" size="x12" />
+          <Arrow rotate="down" size="x12" />
         </CommonButton>
       </div>
     </div>

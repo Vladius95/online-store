@@ -6,18 +6,29 @@ import { HashRouter, Switch, Redirect, Route } from "react-router-dom";
 import { HomePage } from "./fragments/Home/Home";
 import { Footer } from "./fragments/Footer/Footer";
 import { StorePage } from "./fragments/Store/StorePage";
-import { Provider } from "react-redux";
-import { mergedReducers } from "src/store/root";
+import { Provider, useSelector } from "react-redux";
+import { mergedReducers, RootState } from "src/store/root";
 import { createStore } from "redux";
 import { GoodsPage } from "./fragments/Goods/GoodsPage";
+import { GoodsCart } from "./fragments/GoodsCart/GoodsCart";
+import { AsideCartState } from "src/store/aside-cart";
 
 const rootStore = createStore(mergedReducers);
+
+export interface TestProps {}
+
+export function Test({}: TestProps) {
+  const isGoodsCartVisible = useSelector<RootState, AsideCartState>((state: RootState) => state.asideCartReducer);
+  console.log(isGoodsCartVisible);
+  return isGoodsCartVisible && <GoodsCart />;
+}
 
 export function Main() {
   return (
     <Provider store={rootStore}>
       <HashRouter>
         <div className="page-wrapper">
+          <Test />
           <Header />
           <main className="main">
             <Redirect exact from="/" to="/store/1" />

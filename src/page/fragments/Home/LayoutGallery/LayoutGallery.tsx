@@ -2,7 +2,7 @@ import "./LayoutGallery.scss";
 
 import * as React from "react";
 import cn from "classnames";
-import { Arrow } from "src/page/components/Arrow/Arrow";
+import { Arrow } from "src/page/components/icons/Arrow/Arrow";
 import { useStopwatch } from "src/hooks/useStopwatch";
 import { useEventListener } from "src/hooks/useEventListener";
 import { SlideIndicator } from "../SlideIndicator/SlideIndicator";
@@ -84,11 +84,11 @@ export function LayoutGallery({ width, height, imgs, children }: React.PropsWith
       </ul>
 
       <button onClick={onPrev} className="layout-gallery__control layout-gallery__control--prev">
-        <Arrow direction="left" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--prev" />
+        <Arrow rotate="left" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--prev" />
       </button>
 
       <button onClick={onNext} className="layout-gallery__control layout-gallery__control--next">
-        <Arrow direction="right" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--next" />
+        <Arrow rotate="right" size="x32" extraClass="layout-gallery__arrow layout-gallery__arrow--next" />
       </button>
 
       <SlideIndicator count={imgs.length} active={index} extraClass="layout-gallery__indicator" />

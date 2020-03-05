@@ -5,6 +5,7 @@ import { RouteLink } from "src/page/components/CommonLink";
 import { Logo } from "./Logo/Logo";
 import createBrowserHistory from "history/createBrowserHistory";
 import { NavSiteList } from "src/page/components/NavSiteList/NavSiteList";
+import { Cart } from "./Cart/Cart";
 
 const history = createBrowserHistory();
 
@@ -17,8 +18,10 @@ export function Header({}: HeaderProps) {
         <Logo size="x48" />
       </RouteLink>
 
-      <NavSiteList extraClass="header__navigation" />
-      {/* <HeaderUserPanel /> */}
+      <div className="header__right">
+        <NavSiteList extraClass="header__navigation" />
+        <Cart />
+      </div>
     </header>
   );
 }

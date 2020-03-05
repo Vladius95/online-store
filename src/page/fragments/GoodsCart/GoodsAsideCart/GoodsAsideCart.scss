@@ -1,0 +1,39 @@
+@import "src/design/typography";
+@import "src/design/colors";
+
+.goods-aside-cart {
+  height: 100%;
+  width: 350px;
+
+  z-index: 100;
+
+  &__header {
+    position: relative;
+    display: flex;
+    padding: 36px 20px;
+
+    background-color: $color_black;
+    color: $color_white;
+  }
+
+  &__arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__arrow {
+    filter: invert(1);
+  }
+
+  &__title {
+    @include head3;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__temp-wrapper {
+    height: 100%;
+    background-color: $color_white;
+  }
+}

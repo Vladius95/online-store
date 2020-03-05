@@ -7,6 +7,8 @@
   padding: 24px $page-gap;
 
   &__navigation {
+    margin-right: 24px;
+
     .navigation__list {
       display: flex;
     }
@@ -18,5 +20,10 @@
         }
       }
     }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
   }
 }
