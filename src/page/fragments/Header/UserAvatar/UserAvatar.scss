@@ -1,0 +1,19 @@
+@import "src/mixins";
+@import "src/design/typography";
+@import "src/design/colors";
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+
+  &__image {
+    padding-right: 8px;
+    @include setElementSize;
+  }
+
+  &__text {
+    @include common;
+    color: $color_blue;
+  }
+}

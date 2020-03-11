@@ -26,13 +26,13 @@
 
   &__arrow {
     fill: $color_blue;
+    padding: 4px;
+    // &--prev {
+    //   padding-right: 8px;
+    // }
 
-    &--prev {
-      padding-left: 8px;
-    }
-
-    &--next {
-      padding-left: 8px;
-    }
+    // &--next {
+    //   padding-left: 8px;
+    // }
   }
 }

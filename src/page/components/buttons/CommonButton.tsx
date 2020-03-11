@@ -7,7 +7,7 @@ export interface CommonButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLB
 }
 
 export function CommonButton({ extraClass = "", ...buttonProps }: CommonButtonProps) {
-  return <button {...buttonProps} className={`common-button ${extraClass}`} />;
+  return <button type="button" {...buttonProps} className={`common-button ${extraClass}`} />;
 }
 
 // https://material.io/components/buttons/
@@ -16,5 +16,5 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
 }
 
 export function MaterialButton({ extraClass = "", ...buttonProps }: ButtonProps) {
-  return <button {...buttonProps} className={`button ${extraClass}`} />;
+  return <button type="button" {...buttonProps} className={`button ${extraClass}`} />;
 }

@@ -6,6 +6,7 @@ import { Logo } from "./Logo/Logo";
 import createBrowserHistory from "history/createBrowserHistory";
 import { NavSiteList } from "src/page/components/NavSiteList/NavSiteList";
 import { Cart } from "./Cart/Cart";
+import { UserAvatar } from "./UserAvatar/UserAvatar";
 
 const history = createBrowserHistory();
 
@@ -20,6 +21,7 @@ export function Header({}: HeaderProps) {
 
       <div className="header__right">
         <NavSiteList extraClass="header__navigation" />
+        <UserAvatar />
         <Cart />
       </div>
     </header>
