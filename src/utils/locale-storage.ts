@@ -1,6 +1,6 @@
 // TODO переписать на прокси
 
-export type Keys = "cart-goods";
+export type Keys = "cart-goods" | "user";
 
 /**
  * T - интерфейс объекта
@@ -9,20 +9,11 @@ export type Keys = "cart-goods";
  * ls key: T extends {}
  */
 export class LocaleStorage<T> {
-  constructor(private _key: Keys, private _initial: T) {
-    this._initParams();
-  }
+  constructor(private _key: Keys) {}
 
-  private _initParams() {
-    const _storageValue = this.value;
-
-    if (Object.keys(_storageValue).length === 0) {
-      this.newValue = this._initial;
-    }
-  }
-
-  get value(): T {
-    return JSON.parse(localStorage.getItem(this._key) || "{}") as T;
+  get value(): T | null {
+    const data = localStorage.getItem(this._key);
+    return data ? JSON.parse(data) : null;
   }
 
   set newValue(data: T) {
@@ -31,7 +22,9 @@ export class LocaleStorage<T> {
 
   changeKey(key: Keys) {
     this._key = key;
+  }
 
-    this._initParams();
+  static clearValue(key: Keys) {
+    localStorage.setItem(key, null);
   }
 }

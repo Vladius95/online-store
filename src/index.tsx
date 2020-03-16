@@ -4,7 +4,7 @@ import "babel-polyfill";
 import ReactDOM from "react-dom";
 import * as React from "react";
 
-import { Main } from "./page/Main";
+import { Root } from "./page/Main";
 
 const domContainer = document.querySelector("#page-root");
-ReactDOM.render(<Main />, domContainer);
+ReactDOM.render(<Root />, domContainer);

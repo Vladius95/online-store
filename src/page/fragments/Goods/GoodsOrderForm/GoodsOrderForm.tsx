@@ -19,7 +19,7 @@ export function GoodsOrderForm({ goods }: GoodsOrderFormProps) {
   const onIncreaseValue = React.useCallback(() => setQuantity(v => v + 1), []);
   const onDecreaseValue = React.useCallback(() => setQuantity(v => v - 1), []);
 
-  const store = React.useRef<LocaleStorage<CartItem[]>>(new LocaleStorage<CartItem[]>("cart-goods", []));
+  const store = React.useRef<LocaleStorage<CartItem[]>>(new LocaleStorage<CartItem[]>("cart-goods"));
 
   const dispatch = useDispatch<Dispatch<CartAction>>();
   const addToCart = React.useCallback(() => {

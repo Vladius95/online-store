@@ -3,11 +3,7 @@ import { storeDetailsReducer, StoreDetailsAction, StoreDetailsState } from "src/
 import { GoodsAction, GoodsState, goodsReducer } from "./goods";
 import { AsideCartState, AsideCartAction, asideCartReducer } from "./aside-cart";
 import { CartState, CartAction, cartReducer } from "./cart";
-
-// export interface State {
-//   storeDetailsReducer: StoreDetailsAction;
-// goodsReducer: GoodsAction;
-// }
+import { authReducer, AuthAction, AuthState } from "./auth";
 
 export type rootReducers = {
   storeReducer: Reducer<StoreDetailsState, StoreDetailsAction>;
@@ -21,6 +17,13 @@ export type RootState = {
   goodsReducer: GoodsState;
   asideCartReducer: AsideCartState;
   cartReducer: CartState;
+  authReducer: AuthState;
 };
 
-export const mergedReducers = combineReducers({ storeDetailsReducer, goodsReducer, asideCartReducer, cartReducer });
+export const mergedReducers = combineReducers({
+  storeDetailsReducer,
+  goodsReducer,
+  asideCartReducer,
+  cartReducer,
+  authReducer
+});

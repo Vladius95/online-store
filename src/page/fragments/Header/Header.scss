@@ -1,4 +1,6 @@
 @import "src/consts.scss";
+@import "src/design/typography.scss";
+@import "src/design/colors.scss";
 
 .header {
   display: flex;
@@ -25,5 +27,12 @@
   &__right {
     display: flex;
     align-items: center;
+  }
+
+  &__text {
+    @include common;
+    color: $color_blue;
+
+    margin-right: 16px;
   }
 }

@@ -7,12 +7,13 @@ import createBrowserHistory from "history/createBrowserHistory";
 import { NavSiteList } from "src/page/components/NavSiteList/NavSiteList";
 import { Cart } from "./Cart/Cart";
 import { UserAvatar } from "./UserAvatar/UserAvatar";
+import { logIn, AuthState } from "src/store/auth";
+import { useSelector } from "react-redux";
+import { RootState } from "src/store/root";
 
-const history = createBrowserHistory();
+export function Header() {
+  const authData = useSelector<RootState, AuthState>(state => state.authReducer);
 
-export interface HeaderProps {}
-
-export function Header({}: HeaderProps) {
   return (
     <header className="header">
       <RouteLink to="/main">
@@ -21,7 +22,7 @@ export function Header({}: HeaderProps) {
 
       <div className="header__right">
         <NavSiteList extraClass="header__navigation" />
-        <UserAvatar />
+        {authData.user ? <p className="header__text">Hello {authData.user.firstName}</p> : <UserAvatar />}
         <Cart />
       </div>
     </header>

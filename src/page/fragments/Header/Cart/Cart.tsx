@@ -15,7 +15,7 @@ export function Cart() {
   const dispatchCartGoods = useDispatch<Dispatch<CartAction>>();
 
   React.useEffect(() => {
-    const ls = new LocaleStorage<CartItem[]>("cart-goods", []);
+    const ls = new LocaleStorage<CartItem[]>("cart-goods");
     dispatchCartGoods({
       cartState: { goods: ls.value, isLoading: false },
       type: "GET_CART_GOODS"
