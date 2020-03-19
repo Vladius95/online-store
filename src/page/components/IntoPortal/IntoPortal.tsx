@@ -6,7 +6,13 @@ interface PortalProps {
 }
 
 export const IntoPortal = ({ children }: PortalProps) => {
-  const layoutRef = React.useRef<HTMLDivElement>(document.getElementById("layout-root") as HTMLDivElement);
+  const layoutRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    layoutRef.current = document.getElementById("layout-root") as HTMLDivElement;
+  }, []);
+
+  if (!layoutRef.current) return null;
 
   return createPortal(children, layoutRef.current);
 };

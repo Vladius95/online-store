@@ -40,13 +40,13 @@ const initAuthState: AuthState = {
 export const authReducer: Reducer<AuthState, AuthAction> = (state = initAuthState, action: AuthAction) => {
   switch (action.type) {
     case "SUCCESS_REGISTRATION":
-      return { ...action.state };
+      return { ...action.state, isLoading: false };
 
     case "AUTH_SUCCESS":
-      return { ...action.state };
+      return { ...action.state, isLoading: false };
 
     case "LOGOUT":
-      return { ...state, token: null };
+      return { ...state, token: null, isLoading: false };
   }
   return state;
 };

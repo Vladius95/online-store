@@ -39,12 +39,15 @@ function Main() {
     }
   }, []);
 
+  if (authData.isLoading) return null;
+
   return (
     <div className="page-wrapper">
+      <div id="layout-root"></div>
       <GoodsCart />
       <Header />
       <main className="main">
-        <Redirect exact from="/" to="/login/" />
+        <Redirect exact from="/" to={authData.isAuthenticated ? "/home/" : "/login/"} />
         <Switch>
           <Route exact key="home" path="/home/" component={HomePage} />
           <Route exact key="store" path="/store/" component={StorePage} />

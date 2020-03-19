@@ -9,10 +9,10 @@ import { CartState } from "src/store/cart";
 import { Dispatch } from "redux";
 import { AsideCartAction } from "src/store/aside-cart";
 
-export function GoodsAsideCart() {
+export function GoodsAsideCart({ extraClass = "" }: { extraClass?: string }) {
   const dispatchAsideCart = useDispatch<Dispatch<AsideCartAction>>();
 
-  const cartGoods = useSelector<RootState, CartState>(state => state.cartReducer).goods;
+  const cartGoods = useSelector<RootState, CartState>(state => state.cartReducer);
 
   const onClose = React.useCallback(() => {
     dispatchAsideCart({
@@ -21,8 +21,10 @@ export function GoodsAsideCart() {
     });
   }, []);
 
+  if (cartGoods.isLoading) return null;
+
   return (
-    <aside className="goods-aside-cart">
+    <aside className={`goods-aside-cart ${extraClass}`}>
       <header className="goods-aside-cart__header">
         <CommonButton onClick={onClose} extraClass="goods-aside-cart__arrow-btn">
           <Arrow size="x16" rotate="right" extraClass="goods-aside-cart__arrow" />
@@ -30,11 +32,11 @@ export function GoodsAsideCart() {
         <p className="goods-aside-cart__title">Cart</p>
       </header>
       <div className="goods-aside-cart__temp-wrapper">
-        {cartGoods.length === 0 ? (
+        {cartGoods.goods.length === 0 ? (
           <p className="goods-aside-cart__message">Cart is empty</p>
         ) : (
           <ul>
-            {cartGoods.map(g => (
+            {cartGoods.goods.map(g => (
               <li>
                 <p>{g.goods.name}</p>
               </li>
